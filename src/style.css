@@ -1,0 +1,238 @@
+
+.sidebar__ {
+  width: 250px;
+  height: 100vh;
+  float: left;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+}
+.content {
+  width: calc(100% - 250px - 60px);
+  float: left; 
+  margin-left:250px;
+}
+
+/* custom form for category add starts here */
+.category_form form {
+  background: #fff; 
+  width: calc(100% );
+  border-radius: 14px; 
+  transition: all 0.3s ease;
+  border-right:0.1px soild #c7c7c7;
+}
+.category_form   {
+  border-radius:0px;
+  border-right:0.1px solid #c7c7c7;
+  padding:0px 15px;
+}
+.selectedvalue {
+    padding: 13px;
+    border: 1px solid #d6d8e6;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.2s ease-out;
+    position: relative;
+}
+.search-component {
+  position:relative;
+}
+.rightdiv {    
+  width: 40px;
+  position: absolute; 
+  height: 100%;
+  top: 0px;
+  background: #eee;
+  right: 0px;
+  cursor: pointer;
+}
+.rightdiv:before {
+  content: ' ';
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(calc(-50% + 12px), -50%);
+  line-height: 100%;
+  background-image: url(https://www.compassionlighthouse.com/wp-content/plugins/helper_plugin/header_icons/arrow_icon.svg);
+  width: 12px;
+  height: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.4;
+  filter: grayscale(1);
+}
+
+.search-list-ul {
+  border:0.1px solid #c7c7c7;
+  border-radius: 6px;
+  position:relative;
+}
+.search-list-ul ul{
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  border: 0.1px solid #c7c7c7;
+  box-shadow: 0px 1px 4px 0px #eee;
+  position: absolute;
+  top: 16px;
+  z-index: 1;
+  background: #fff;
+  width: 100%;
+  height: max-content;
+  overflow-y: auto;
+  max-height: 300px;
+  margin-top: 44px;
+  width: calc(100% - 28px);
+  left: 50%;
+  transform: translate(-50%, 0px);  
+}
+.search-list-ul input {
+  width:calc(100% - 54px);
+ 
+  display:flex;
+  margin:14px auto;
+}
+.search-list-ul ul li {
+  font-size:16px;
+  line-height:150%;
+  padding:6px;
+  border-bottom: 0.1px solid #c7c7c7;
+  cursor:pointer; 
+}
+.search-list-ul li:hover {
+  background-color:#eee;
+  color:blue;
+}
+
+.category_form .row {
+  display: flex;
+  flex-direction: column; 
+  margin-bottom: 20px;
+}
+
+.category_form .row label {
+  font-size: 13px;
+  color: #8086a9;
+  margin-bottom:13px;
+}
+
+.category_form .row input {
+  flex: 1;
+  padding: 13px;
+  border: 1px solid #d6d8e6;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: all 0.2s ease-out;
+  
+}
+
+.category_form .row input:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem #7b77a833
+}
+
+.category_form .row input::placeholder {
+  color: #C8CDDF;
+}
+
+.category_form button {
+  width: auto;
+  padding: 12px;
+  font-size: 18px;
+  background: #15C39A;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 15px;
+  transition: background 0.2s ease-out;
+}
+
+.category_form button:hover {
+  background: #55D3AC;
+}
+.category_form {
+   
+  height: 100vh;
+  display: flex;
+  flex-direction: column;  
+}
+.category_bk_page {
+    display: grid;
+    grid-template-columns: 40% 60%;
+} 
+.cat_list {
+  padding:0px 15px;
+}
+
+.reacts-pagination li {
+  
+  border: 0.1px solid #c7c7c7;
+  border-radius: 10px;
+  margin: 0px 4px;
+}
+.reacts-pagination ul {
+  list-style: none;
+  display: inline-flex;
+}
+.reacts-pagination {
+  text-align: center;
+}
+.reacts-pagination ul a {
+  color:#000 !important;
+  text-decoration: none !important;
+  padding: 20px;
+  cursor:pointer;
+
+}
+.reacts-pagination li.selected{
+  background: #15C39A; 
+  color:#fff;
+} 
+.gk-btn-group {
+  display:grid;
+  grid-template-columns: 50% 50%;
+}
+.gk-btn-group button {
+  padding: 10px 0px;
+  cursor: pointer;
+}
+.gk-btn-group button:nth-child(1) {
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.gk-btn-group button:nth-child(2) {
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+  .cat-add-btn {
+  margin: 15px;
+
+  }
+  .heading-container {
+  display: inline-flex;
+  justify-content: space-between;
+
+  }
+@media(max-width: 767px) {
+  
+   
+  .category_form .row input {
+    margin:auto;
+    width:calc(100% - 60px);
+
+  }
+.category_form form {
+    background: #f9faff; 
+  }
+  .category_form .row label {
+      width: calc(100% - 40px);
+      margin: auto;
+      margin-bottom: 13px;
+  }
+
+}
