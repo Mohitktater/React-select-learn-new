@@ -106,7 +106,6 @@ var token = localStorage.getItem('token')
     })
 
   }
-   
   const columns = [
         {
            name: '#',
