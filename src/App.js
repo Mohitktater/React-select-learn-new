@@ -31,7 +31,7 @@ function App() {
   }, [authenticated]);
 
   if (authenticated === null) {
-    // Loading state, you can display a loading spinner or something else
+     
     return null;
   }
 
@@ -46,6 +46,12 @@ function App() {
       
                 <Route path="/user/create" element={<CreateUser />} />
                 <Route path="/login" element={<Login />} />
+                 
+                {authenticated ? (
+                  <Route path="/" element={<Category />} />
+                ) : (
+                  <Route path="/" element={<Navigate to="/login" replace />} />
+                )}
 
               
                 {authenticated ? (
